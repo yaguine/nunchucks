@@ -1,0 +1,66 @@
+# Nmap 7.92 scan initiated Fri Feb 18 21:59:10 2022 as: nmap -sVC -p22,80,443 -n --min-rate 5000 -vv -oN nmap/scripts 10.10.11.122
+Nmap scan report for 10.10.11.122
+Host is up, received echo-reply ttl 63 (0.055s latency).
+Scanned at 2022-02-18 21:59:10 CET for 21s
+
+PORT    STATE SERVICE  REASON         VERSION
+22/tcp  open  ssh      syn-ack ttl 63 OpenSSH 8.2p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 6c:14:6d:bb:74:59:c3:78:2e:48:f5:11:d8:5b:47:21 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCq1JmckuJo2Y9YNiQEI6OM3uM/w5Nb9D6oOZkigNfQ5MY0FzdfAac2tfeV9JekpB0i3QvwaIg8ZFM3qpaVWgCYOwPKXDUdkPaDcjoUGDJKQ+ozI22JsGLhW18LdpZkqhsa9kSwID7hj6PjtJM0e7+t6oQlgbKBpAIfIWai8zcXfIuJpN5VzT9Ix7btb4yZ3DrSskDJsFgFpDMN3aDTCsCy2noKDm5mlUlJ7w28Qa6+Ju7JaSdyc0k6ftFQ1PImyLjoOefWp/5UxztBbWk191WJApoOJC0IUOz8kbbkCDEtIh7kwdX65uDJ86L+KGdlCPlB4svIpwhYgkkg7GAJXP9Ti7uZHsrxahbI6LZRLuX1X6guWaq/PPz8tmVfcjY7ggh1nAa+wUgU67X/zTie4J+BiJW3wGvGAiEetUs5fJ/CA/BIfQAijCVlJ4yGJ95cUmALeiRRYJJpq4BpZTC6RgUQIHr+Yv6wyKuVY9GPwdd2+SEuXG+jjim1SkqtErrlpuk=
+|   256 a2:f4:2c:42:74:65:a3:7c:26:dd:49:72:23:82:72:71 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAM6D7HHa0rYKxL/Crh7HeTDHOjrvQGyLngKIOz+M9iLI8+XkEpa0iPsGo4uob5Sj4iKN+QPjYwX2wfDUPb/3PA=
+|   256 e1:8d:44:e7:21:6d:7c:13:2f:ea:3b:83:58:aa:02:b3 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICav37LXta1VOXvC+x3kcTq8ssxpygmnuLwsPSOw2GA0
+80/tcp  open  http     syn-ack ttl 63 nginx 1.18.0 (Ubuntu)
+|_http-title: Did not follow redirect to https://nunchucks.htb/
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+443/tcp open  ssl/http syn-ack ttl 63 nginx 1.18.0 (Ubuntu)
+|_http-favicon: Unknown favicon MD5: 4BD6ED13BE03ECBBD7F9FA7BAA036F95
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Nunchucks - Landing Page
+| ssl-cert: Subject: commonName=nunchucks.htb/organizationName=Nunchucks-Certificates/stateOrProvinceName=Dorset/countryName=UK/localityName=Bournemouth
+| Subject Alternative Name: DNS:localhost, DNS:nunchucks.htb
+| Issuer: commonName=Nunchucks-CA/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-08-30T15:42:24
+| Not valid after:  2031-08-28T15:42:24
+| MD5:   57fc 410d e809 1ce6 82f9 7bee 4f39 6fe4
+| SHA-1: 518c 0fd1 6903 75c0 f26b a6cb e37d 53b8 a3ff 858b
+| -----BEGIN CERTIFICATE-----
+| MIIDfzCCAmegAwIBAgIUKxAbJZWVom8Q586tlGzfX5kvDOowDQYJKoZIhvcNAQEL
+| BQAwJDELMAkGA1UEBhMCVVMxFTATBgNVBAMMDE51bmNodWNrcy1DQTAeFw0yMTA4
+| MzAxNTQyMjRaFw0zMTA4MjgxNTQyMjRaMG0xCzAJBgNVBAYTAlVLMQ8wDQYDVQQI
+| DAZEb3JzZXQxFDASBgNVBAcMC0JvdXJuZW1vdXRoMR8wHQYDVQQKDBZOdW5jaHVj
+| a3MtQ2VydGlmaWNhdGVzMRYwFAYDVQQDDA1udW5jaHVja3MuaHRiMIIBIjANBgkq
+| hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7f8kUO3+Tg/tliYC6DTdaQMz8kQflhXE
+| SFcXtvq0YW7+d83N1eHl1Cofk31roKIloTsWk+WvQfzBnzDT9Jlo2CT/c2Q8pxAD
+| rJDvmrRlx5g6lGfB44/YUx1crjka44FPcwWbSUQ3RJznJ8jbD+mVuGXIK36BAd0l
+| SYcIYbDwoE+7DTpP5FI+u8usIFyHo8CBllv6eXf2vOSAZ2xfyEG9fKC2fA3QOn9k
+| kFQS7jM8QDnfi3El6nz2LkceIR6j4yCBTMP0306Q1h5HxzBRN61vHatbgZBHMuk5
+| J6SU17lDk0ZWOAndm8GZ5oqXb1izqCI+br98gmNiDI3O8iXXD+WUXwIDAQABo2Aw
+| XjAfBgNVHSMEGDAWgBTGviN/t7q7DX8/lk5dNecH/45EDjAJBgNVHRMEAjAAMAsG
+| A1UdDwQEAwIE8DAjBgNVHREEHDAagglsb2NhbGhvc3SCDW51bmNodWNrcy5odGIw
+| DQYJKoZIhvcNAQELBQADggEBAFBbtVQXf2UcbXroFdEjCGfjcAH9ftCFtCD8ptBm
+| CMD8W/WyFnJ17IVjVoatfZimg5KunneNEHfMpxXe7+YMHY3qxgHmJCeVJA2l04hS
+| PTWljwqfaK50zivBs7+TYTccZPz/F83upQsPVdWCIOtH3Qq9A4Ox+dLvIVA+geGH
+| Bbp0uZowM3k/rW2nqBaBkpxOlHrahxgUr4Hz9/j4dilw/Y3OUEvegDN9D5Cvh69f
+| pQ8UwDx0nqYtCRF/M44LFGlmgjQBZqqijvkCVV4jZRNfPQEeuxd7OnDddgQLwMK1
+| DKIK3Eqo7fLLlXqQBQgg6X0UbN9RsWjD8vq1uc2iQDUH9To=
+|_-----END CERTIFICATE-----
+| tls-nextprotoneg: 
+|_  http/1.1
+| tls-alpn: 
+|_  http/1.1
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+|_ssl-date: TLS randomness does not represent time
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Feb 18 21:59:31 2022 -- 1 IP address (1 host up) scanned in 20.92 seconds
