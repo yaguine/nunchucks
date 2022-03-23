@@ -46,7 +46,7 @@ we try to know which template Node is using by trying payloads on this [link](ht
 we come to the conclusion that its using **NUNJUCKS**
 
 after a lot of tries, i find a payload that actually works :  
-`{{range.constructor('return global.process.mainModule.require(\"child_process\").execSync(\"whoami\")')()}}`
+![](./contents/screenshots/screenshot1.png)  
 
 the reason why i needed a lot of tries is because the payload i found had single quotes instead of backslash + double quotes  
 that is, `'child_process'` insted of `\"child_process\"`
